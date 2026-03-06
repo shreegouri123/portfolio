@@ -15,7 +15,7 @@ color:#333;
 overflow-x:hidden;
 }
 
-/* floating blobs */
+/* floating pastel blobs */
 
 .blob1{
 position:absolute;
@@ -39,13 +39,20 @@ right:-80px;
 filter:blur(100px);
 }
 
-/* navbar */
+/* NAVBAR */
 
 .navbar{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 80px;
 background:#e9e6ff;
+}
+
+.logo{
+color:#6c63ff;
+font-size:22px;
+font-weight:600;
 }
 
 .nav-links{
@@ -57,13 +64,14 @@ list-style:none;
 .nav-links a{
 text-decoration:none;
 color:#555;
+font-weight:500;
 }
 
-.logo{
+.nav-links a:hover{
 color:#6c63ff;
 }
 
-/* hero */
+/* HERO */
 
 .hero{
 padding:120px 80px;
@@ -83,13 +91,19 @@ font-size:48px;
 color:#6c63ff;
 }
 
+.hero-text p{
+margin-top:20px;
+max-width:500px;
+line-height:1.6;
+}
+
 .hero-img img{
 width:240px;
 border-radius:50%;
 border:6px solid #c9c4ff;
 }
 
-/* buttons */
+/* BUTTONS */
 
 .buttons{
 margin-top:30px;
@@ -102,13 +116,14 @@ border-radius:8px;
 text-decoration:none;
 margin-right:10px;
 color:#333;
+transition:0.3s;
 }
 
 .btn:hover{
 background:#b3acff;
 }
 
-/* sections */
+/* SECTIONS */
 
 section{
 padding:80px;
@@ -119,11 +134,12 @@ color:#6c63ff;
 margin-bottom:20px;
 }
 
-/* about cards */
+/* ABOUT */
 
 .about-cards{
 display:flex;
 gap:30px;
+margin-top:20px;
 }
 
 .card{
@@ -131,14 +147,16 @@ background:white;
 padding:25px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
+flex:1;
 }
 
-/* skills */
+/* SKILLS */
 
 .skills-container{
 display:flex;
 gap:20px;
 flex-wrap:wrap;
+margin-top:20px;
 }
 
 .skill{
@@ -147,11 +165,15 @@ padding:12px 20px;
 border-radius:8px;
 }
 
-/* projects */
+/* PROJECT SECTION */
+
+#projects{
+margin-top:60px;
+}
 
 .projects-container{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
 gap:40px;
 margin-top:40px;
 }
@@ -161,42 +183,13 @@ background:white;
 border-radius:18px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-/* PROJECT SECTION */
-
-#projects{
-margin-top:80px;
-}
-
-/* grid layout */
-
-.projects-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-gap:40px;
-margin-top:40px;
-}
-
-/* project card */
-
-.project-card{
-background:#ffffff;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:all 0.4s ease;
 }
-
-/* hover animation */
 
 .project-card:hover{
 transform:translateY(-10px);
 box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
-
-/* project image */
 
 .project-image img{
 width:100%;
@@ -204,28 +197,22 @@ height:200px;
 object-fit:cover;
 }
 
-/* content */
-
 .project-content{
 padding:25px;
 }
-
-/* title */
 
 .project-content h3{
 color:#6c63ff;
 margin-bottom:10px;
 }
 
-/* description */
-
 .project-content p{
 color:#555;
-margin-bottom:10px;
 line-height:1.5;
+margin-bottom:10px;
 }
 
-/* tech stack */
+/* tech stack badges */
 
 .tech-stack{
 margin-top:10px;
@@ -239,7 +226,7 @@ font-size:13px;
 margin-right:6px;
 }
 
-/* buttons */
+/* project button */
 
 .project-buttons{
 margin-top:20px;
@@ -260,57 +247,27 @@ transition:0.3s;
 background:#b3acff;
 }
 
-
-.project-content{
-padding:25px;
-}
-
-.project-content h3{
-color:#6c63ff;
-margin-bottom:10px;
-}
-
-.tech-stack span{
-background:#efeaff;
-padding:6px 12px;
-border-radius:6px;
-font-size:13px;
-margin-right:6px;
-}
-
-.project-buttons{
-margin-top:20px;
-}
-
-.project-buttons a{
-text-decoration:none;
-background:#c9c4ff;
-padding:10px 18px;
-border-radius:8px;
-margin-right:10px;
-color:#333;
-}
-
-.project-buttons a:hover{
-background:#b3acff;
-}
-
-/* contact */
+/* CONTACT */
 
 #contact a{
 color:#6c63ff;
 text-decoration:none;
 }
 
-/* footer */
+#contact a:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:20px;
 background:#e9e6ff;
+margin-top:40px;
 }
 
-/* cursor */
+/* CURSOR ANIMATION */
 
 .cursor{
 animation:blink 1s infinite;
@@ -322,7 +279,7 @@ animation:blink 1s infinite;
 100%{opacity:1;}
 }
 
-/* reveal */
+/* SCROLL REVEAL */
 
 .reveal{
 transform:translateY(60px);
@@ -333,4 +290,78 @@ transition:1s;
 .reveal.active{
 transform:translateY(0);
 opacity:1;
+}
+
+/* ================= MOBILE RESPONSIVE DESIGN ================= */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:center;
+padding:20px;
+}
+
+.nav-links{
+flex-direction:column;
+gap:15px;
+margin-top:10px;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+.hero-content{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+.hero-img img{
+width:180px;
+margin-top:30px;
+}
+
+section{
+padding:60px 20px;
+}
+
+.about-cards{
+flex-direction:column;
+gap:20px;
+}
+
+.skills-container{
+justify-content:center;
+}
+
+.projects-container{
+grid-template-columns:1fr;
+}
+
+.project-card{
+width:100%;
+}
+
+.buttons{
+display:flex;
+flex-direction:column;
+gap:10px;
+align-items:center;
+}
+
+.btn{
+width:200px;
+text-align:center;
+}
+
+#contact p{
+text-align:center;
+font-size:14px;
+}
+
 }
