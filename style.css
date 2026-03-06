@@ -365,3 +365,45 @@ font-size:14px;
 }
 
 }
+
+/* HAMBURGER MENU */
+
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+}
+
+.hamburger span{
+height:3px;
+width:25px;
+background:#6c63ff;
+margin:4px;
+border-radius:5px;
+}
+
+/* mobile menu */
+
+@media (max-width:768px){
+
+.hamburger{
+display:flex;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#e9e6ff;
+position:absolute;
+top:70px;
+right:0;
+width:100%;
+text-align:center;
+padding:20px 0;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
