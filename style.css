@@ -1,0 +1,336 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f6f4ff;
+color:#333;
+overflow-x:hidden;
+}
+
+/* floating blobs */
+
+.blob1{
+position:absolute;
+width:300px;
+height:300px;
+background:#dcd6ff;
+border-radius:50%;
+top:-80px;
+left:-80px;
+filter:blur(100px);
+}
+
+.blob2{
+position:absolute;
+width:300px;
+height:300px;
+background:#ffe2ec;
+border-radius:50%;
+bottom:-100px;
+right:-80px;
+filter:blur(100px);
+}
+
+/* navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 80px;
+background:#e9e6ff;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#555;
+}
+
+.logo{
+color:#6c63ff;
+}
+
+/* hero */
+
+.hero{
+padding:120px 80px;
+}
+
+.hero-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.hero-text h1{
+font-size:48px;
+}
+
+.hero-text span{
+color:#6c63ff;
+}
+
+.hero-img img{
+width:240px;
+border-radius:50%;
+border:6px solid #c9c4ff;
+}
+
+/* buttons */
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+padding:12px 25px;
+background:#c9c4ff;
+border-radius:8px;
+text-decoration:none;
+margin-right:10px;
+color:#333;
+}
+
+.btn:hover{
+background:#b3acff;
+}
+
+/* sections */
+
+section{
+padding:80px;
+}
+
+h2{
+color:#6c63ff;
+margin-bottom:20px;
+}
+
+/* about cards */
+
+.about-cards{
+display:flex;
+gap:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* skills */
+
+.skills-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.skill{
+background:#ffe8f0;
+padding:12px 20px;
+border-radius:8px;
+}
+
+/* projects */
+
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:40px;
+margin-top:40px;
+}
+
+.project-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+/* PROJECT SECTION */
+
+#projects{
+margin-top:80px;
+}
+
+/* grid layout */
+
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:40px;
+margin-top:40px;
+}
+
+/* project card */
+
+.project-card{
+background:#ffffff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:all 0.4s ease;
+}
+
+/* hover animation */
+
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* project image */
+
+.project-image img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+/* content */
+
+.project-content{
+padding:25px;
+}
+
+/* title */
+
+.project-content h3{
+color:#6c63ff;
+margin-bottom:10px;
+}
+
+/* description */
+
+.project-content p{
+color:#555;
+margin-bottom:10px;
+line-height:1.5;
+}
+
+/* tech stack */
+
+.tech-stack{
+margin-top:10px;
+}
+
+.tech-stack span{
+background:#efeaff;
+padding:6px 12px;
+border-radius:6px;
+font-size:13px;
+margin-right:6px;
+}
+
+/* buttons */
+
+.project-buttons{
+margin-top:20px;
+}
+
+.project-buttons a{
+text-decoration:none;
+background:#c9c4ff;
+padding:10px 18px;
+border-radius:8px;
+margin-right:10px;
+color:#333;
+font-weight:500;
+transition:0.3s;
+}
+
+.project-buttons a:hover{
+background:#b3acff;
+}
+
+
+.project-content{
+padding:25px;
+}
+
+.project-content h3{
+color:#6c63ff;
+margin-bottom:10px;
+}
+
+.tech-stack span{
+background:#efeaff;
+padding:6px 12px;
+border-radius:6px;
+font-size:13px;
+margin-right:6px;
+}
+
+.project-buttons{
+margin-top:20px;
+}
+
+.project-buttons a{
+text-decoration:none;
+background:#c9c4ff;
+padding:10px 18px;
+border-radius:8px;
+margin-right:10px;
+color:#333;
+}
+
+.project-buttons a:hover{
+background:#b3acff;
+}
+
+/* contact */
+
+#contact a{
+color:#6c63ff;
+text-decoration:none;
+}
+
+/* footer */
+
+footer{
+text-align:center;
+padding:20px;
+background:#e9e6ff;
+}
+
+/* cursor */
+
+.cursor{
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
+}
+
+/* reveal */
+
+.reveal{
+transform:translateY(60px);
+opacity:0;
+transition:1s;
+}
+
+.reveal.active{
+transform:translateY(0);
+opacity:1;
+}
